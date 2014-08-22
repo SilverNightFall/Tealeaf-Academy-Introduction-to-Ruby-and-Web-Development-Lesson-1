@@ -1,0 +1,91 @@
+Quiz: Lesson 1
+
+Some exercises from lesson 1 materials:
+
+What is the value of a after the below code is executed?
+
+
+  a = 1
+  b = a
+  b = 3
+
+  Answer: a = 1 
+
+What's the difference between an Array and a Hash?
+
+Answer: 
+Arrays are ordered by an an integer
+Hashes have key value pairs
+
+Every Ruby expression returns a value. Say what value is returned in the below expressions:
+
+arr = [1, 2, 3, 3]
+[1, 2, 3, 3].uniq
+[1, 2, 3, 3].uniq!
+
+Answer:
+arr = [1, 2, 3, 3]             #returns => [1, 2, 3, 3]
+[1, 2, 3, 3].uniq          #returns => [1, 2, 3]  
+[1, 2, 3, 3].uniq!         #returns => [1, 2, 3] 
+
+
+What's the difference between the map and select methods for the Array class? Give an example of when you'd use one versus the other.
+They both take a block
+
+Answer: 
+
+They are both so similiar it is really hard to say what is so different from them
+
+[1,2,3].collect{ |n| n*2 }     =>     [2,4,6]
+[1,2,3].map { |n| n*2 }        =>     [2,4,6]
+[1,2,3].map { |n| n>2 }        =>     [false, false, true]
+[1,2,3].collect { |n| n>2 }    =>     [false, false, true]
+
+Some differences
+
+[1,2,3,4,5].select { |i| i > 3 }
+=> [4,5]
+
+[1,2,3,4,5].map { |i| i > 3 }
+=> [false, false, false, true, true]
+
+Map will also tell you if something is true or false. If you use a block with map to manipulate an array and set it to a variable the manipulated array will be result of the variable and with a block with select it will return the original array
+
+Select is good for searching for something in an array.  
+
+Say you wanted to create a Hash. How would you do so if you wanted the hash keys to be String objects instead of symbols?
+
+If you use a String object as a hash key, the hash will duplicate the string internally and will use that copy as its key. The copy will be frozen. Any changes made to the original string will not affect the hash.
+
+person = { ​'name'​ => ​'Victoria'​, ​'location'​ => ​'Florida'​, ​'age'​ => ​'32'​ }”
+
+What is returned?
+
+
+  x = 1
+
+  x.odd? ? "no way!" : "yes, sir!"
+What is x?
+
+Answer: "no way!"
+
+  x = 1
+
+  3.times do
+    x += 1
+  end
+  puts x
+
+What is x?
+
+Answer = 4
+
+
+  3.times do  
+    x += 1
+  end
+
+  puts x
+
+  Answer: x has not been declared
+
